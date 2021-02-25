@@ -343,6 +343,21 @@ db.traspasos.insertMany([
         "id_equipo":14
     },
     {
+        "id_integrante":18, "id_equipo":06
+    },
+    {
+        "id_integrante":32, "id_equipo":05
+    },
+    {
+        "id_integrante":08, "id_equipo":10
+    },
+    {
+        "id_integrante":43, "id_equipo":15
+    },
+    {
+        "id_integrante":79, "id_equipo":01
+    },
+    {
         "id_integrante":21, "id_equipo":02
     },
     {
