@@ -28,7 +28,7 @@ db.equipos.insertMany([
         "rey":{"confirm":true, "competicion":["UEFA"]}
     },
     {
-        "id_equipo":02, "id_competicion":[3], "nombre_equipo":"Ral Betis Balompié", "fecha_fundado":ISODate("1907-09-12"), "palmares":{"LaLiga Santander":1,"LaLiga SmartBank":7,"Copa del Rey":2}, "rey":{"confirm":false, "competicion":[]}
+        "id_equipo":02, "id_competicion":[3], "nombre_equipo":"Real Betis Balompié", "fecha_fundado":ISODate("1907-09-12"), "palmares":{"LaLiga Santander":1,"LaLiga SmartBank":7,"Copa del Rey":2}, "rey":{"confirm":false, "competicion":[]}
     },
     {
         "id_equipo":03, "id_competicion":[4], "nombre_equipo":"Málaga Club de Fútbol", "fecha_fundado":ISODate("1948-05-25"), "palmares":{"LaLiga SmartBank":4}, "rey":{"confirm":false, "competicion":[]}
@@ -91,7 +91,9 @@ db.plantillas.insertMany([
     {
         "id_integrante":01,
         "id_equipo":01,
-        "tipo":"entrenador","nombre":"Julen", "apellido":"Lopetegui",
+        "tipo":"entrenador",
+        "nombre":"Julen",
+        "apellido":"Lopetegui",
         "fecha_nacimiento":ISODate("1977-05-02"),
         "valor":20000000
     },

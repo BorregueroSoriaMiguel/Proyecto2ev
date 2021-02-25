@@ -47,7 +47,7 @@ db.equipos.aggregate([
         $match:{
             $and:[
                 { $or:[
-                    { "id_competicion":1},
+                    {"id_competicion":1},
                     {"id_competicion":2 }
                 ] },
                 {"rey.confirm":true}
@@ -203,3 +203,25 @@ db.plantillas.aggregate([
         }
     }
 ]).pretty()
+
+
+
+//Con esta consulta obtenemos los equipos que participan en la Champions, LaLiga Santander y en la Copa del Rey.
+db.equipos.aggregate([
+    {
+        $project:{
+           "_id":0,
+            "nombre_equipo":1,
+            "id_champions": { $eq: [ { $arrayElemAt: [ "$id_competicion", 0 ] }, 1 ] },
+            "id_laliga_sananter": { $eq: [ { $arrayElemAt: [ "$id_competicion", 1 ] }, 3 ] },
+            "id_copa_del_rey": { $eq: [ { $arrayElemAt: [ "$id_competicion", 2 ] }, 5 ] },
+        }
+    },
+    {
+        $match:{
+            $expr: { $eq: [ "$id_champions", true ] },
+            $expr: { $eq: [ "$id_laliga_santander", true ] },
+            $expr: { $eq: [ "$id_copa_del_rey", true ] }
+        }
+    }
+])
