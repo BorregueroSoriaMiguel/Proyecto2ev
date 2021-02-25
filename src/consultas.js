@@ -78,7 +78,8 @@ db.equipos.aggregate([
 
 
 
-//Con este conjunto de aggregates conseguimos acceder a todos los datos de la base de datos.
+/*Con este conjunto de aggregates conseguimos acceder a todos los
+datos de la basede datos y obtener el valor total de todos los equipos.*/
 db.plantillas_y_traspasos.drop()
 db.plantillas.aggregate([
     {
@@ -206,7 +207,8 @@ db.plantillas.aggregate([
 
 
 
-//Con esta consulta obtenemos los equipos que participan en la Champions, LaLiga Santander y en la Copa del Rey.
+/*Con esta consulta obtenemos los equipos que participan
+en la Champions,LaLiga Santander y en la Copa del Rey.*/
 db.equipos.aggregate([
     {
         $project:{
